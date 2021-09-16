@@ -14,10 +14,10 @@ pip install opencv-python
 ```
 - dlib "Require Cmake"
 ```
-pip install dlib
-```
-```
 pip install cmake
+```
+```
+pip install dlib
 ```
 - time
 ```
