@@ -39,13 +39,13 @@ To determine the faces that our program should know
    <br /> you can add The name and also a small description as follow : 
    
   ```
-  Name1-Name2-Name3-First description line- second description line- third description line- ... -.jpg
+  Name1-Name2-Name3-First description line- second description line- third description line- ... .jpg
   ```
   Note: **"-"** used to write in new line
   <br />Example: 
   
   ```
-  Angela-Merkel-[German politician serving- as Chancellor of Germany- since 2005]-.jpg
+  Angela-Merkel-[German politician serving- as Chancellor of Germany- since 2005].jpg
   ```
   
 ## code 
