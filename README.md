@@ -34,7 +34,7 @@ pip install screeninfo
 # How to use this code
 ## **Database** Folder
 To determine the faces that our program should know
-- Put the **face image** as **png** or **jpg** format in **Database** Folder
+- Put the **face image** as **.png** or **.jpg** format in **Database** Folder
 - using the name of the image:
   you can add The name and also a small description as follow : 
   ```
