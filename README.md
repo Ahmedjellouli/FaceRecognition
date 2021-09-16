@@ -36,15 +36,18 @@ pip install screeninfo
 To determine the faces that our program should know
 - Put the **face image** as **.png** or **.jpg** format in **Database** Folder
 - using the name of the image:
-  you can add The name and also a small description as follow : 
+   <br /> you can add The name and also a small description as follow : 
+   
   ```
   Name1-Name2-Name3-First description line- second description line- third description line- ... -.jpg
   ```
-  **"-"** used to write in new line
-  Example: 
+  Note: **"-"** used to write in new line
+  <br />Example: 
+  
   ```
   Angela-Merkel-[German politician serving- as Chancellor of Germany- since 2005]-.jpg
   ```
+  
 ## code 
 
 - Fonctionnalities avaliable in this code:
