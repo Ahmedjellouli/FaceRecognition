@@ -126,40 +126,34 @@ class Recognizer:
 
         print("\n ")
         self.DatabaseFacesList = np.array(self.DatabaseFacesList)
-    def AddName(self, Name, org):
-        name1 = ""
-        name2 = ""
-        intro = ""
-        for letter in Name:
-            if letter != " ":
-                if name2 == "":
-                    name1 = name1 + letter
-                    continue
-            if letter == "[" or intro != "" :
-                    intro = intro + letter
-                    continue
-            name2 = name2 + letter
-
-        name2 = name2.replace(" ", "")
-
+    def AddName(self, description, org):
         font = cv2.FONT_HERSHEY_DUPLEX
         fontScale = 0.5
         color = (255, 255, 255)
         thickness = 1
         Y = 20
         x = 165
-        y =20
-        cv2.putText(self.frame, name1, (org[0]-x, org[1]     -y ), font, fontScale, color, thickness, cv2.LINE_AA)
-        cv2.putText(self.frame, name2, (org[0]-x, org[1]+ Y -y ), font, fontScale, color, thickness, cv2.LINE_AA)
-        cv2.putText(self.frame, intro, (org[0]-x, org[1]+ 2*Y -y), font, fontScale, color, thickness, cv2.LINE_AA)
-        cv2.line(self.frame,(org[0]-x, org[1]+ 2*Y -y+15),(org[0]-x +220, org[1]+ 2*Y -y+15), (150, 150, 28), 2 )
+        y =-40
+        Skip = -20
+        intro = ""
+        intro_ = ""
+        description = description+"-"
+        for letter in description:   #to organize writing name and description
+                    intro = intro + letter
+                    if letter == '-':
+                        Skip += 20
+                        intro = ""
+                    if intro == '':
+                         cv2.putText(self.frame, intro_, (org[0] - x, org[1] + 2 * Y - y+Skip), font, fontScale, color, thickness, cv2.LINE_AA)
+                    intro_ = intro
+        cv2.line(self.frame,(org[0]-x, org[1]+ 2*Y -y+15+Skip),(org[0]-x +300, org[1]+ 2*Y -y+15+Skip), (150, 150, 28), 2 )
 
     def AddLandmarks(self, landmarks):
         if self.detectLandmarks:
             for Point in range(1, 68):
                 x = landmarks.part(Point).x
                 y = landmarks.part(Point).y
-                cv2.circle(self.frame, (x, y), 0, (150, 150, 28), 4)
+                cv2.circle(self.frame, (x, y), 0, (179, 135,47 ), 2)
 
         if self.detectFrontalFace:
             x1  = landmarks.part(1).x
@@ -187,5 +181,5 @@ class Recognizer:
                     ChangedTolerance = norm
                     FaceName = self.DatabaseNamesList[i]
                 i += 1
-            self.AddName( Name=FaceName, org=(shape.part(8).x, shape.part(8).y))
+            self.AddName( description=FaceName, org=(shape.part(8).x, shape.part(8).y))
             self.AddLandmarks(shape)
