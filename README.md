@@ -69,8 +69,9 @@ Video = Video(Recognizer=Recognizer,
 ```
 
 ``` 
-        - detectFrontalFace     = True or false to detect frontale face in video or Image
+        - Database              = To choose which database direction you will use         
         - Tolerance             = 0 to 1 to determine tolerance of Recognition        
+        - detectFrontalFace     = True or false to detect frontale face in video or Image
         - detectLandmarks       = True or false to detect 68 landmarks in video or Image 
         - save                  = True or false to save image after Recognition
         
