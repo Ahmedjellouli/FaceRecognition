@@ -85,7 +85,7 @@ Video = Video(Recognizer=Recognizer,
 ``` 
 # Author
 
-* **Ahmed Jellouli** - *ENGINEERING STUDENT interested in data analysis* 
+* **Ahmed Jellouli** - *ELECTRICAL ENGINEERING STUDENT INTERESTED IN DATA ANALYSIS*
 
 # License
 
