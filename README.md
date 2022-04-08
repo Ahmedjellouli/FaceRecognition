@@ -1,6 +1,6 @@
 # Recognize Faces in video or image easily 
 
-in this code we will take any video or image and try to Recognize all faces on them using **OpenCV** and **dlib** libraries;
+in this code we will take any video or image and try to Recognize all faces on it using **OpenCV** and **dlib** libraries;
 
 ![](FacialReco.png)
 
